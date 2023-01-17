@@ -1,0 +1,13 @@
+{% extends 'servicos/base.html' %}
+
+{% block title %}
+Cadastro de Serviços
+{% endblock title %}
+
+{%block content %}
+<form method="POST">
+  {% csrf_token %}
+  {{form_servico.as_p}}
+  <button class="btn btn-primary" type="submit">Salvar</button>
+</form>
+{%endblock content %}
