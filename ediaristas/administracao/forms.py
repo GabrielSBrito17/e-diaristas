@@ -29,29 +29,29 @@ class ServicoForm(forms.ModelForm):
         return Decimal(data.replace(',', '.'))
 
     def clean_porcentagem_comissao(self):
-        data = self.cleaned_data['valor_minimo']
+        data = self.cleaned_data['porcentagem_comissao']
         return Decimal(data.replace(',', '.'))
 
     def clean_valor_quarto(self):
-        data = self.cleaned_data['valor_minimo']
+        data = self.cleaned_data['valor_quarto']
         return Decimal(data.replace(',', '.'))
 
     def clean_valor_sala(self):
-        data = self.cleaned_data['valor_minimo']
+        data = self.cleaned_data['valor_sala']
         return Decimal(data.replace(',', '.'))
 
     def clean_valor_banheiro(self):
-        data = self.cleaned_data['valor_minimo']
+        data = self.cleaned_data['valor_banheiro']
         return Decimal(data.replace(',', '.'))
 
     def clean_valor_cozinha(self):
-        data = self.cleaned_data['valor_minimo']
+        data = self.cleaned_data['valor_cozinha']
         return Decimal(data.replace(',', '.'))
 
     def clean_valor_quintal(self):
-        data = self.cleaned_data['valor_minimo']
+        data = self.cleaned_data['valor_quintal']
         return Decimal(data.replace(',', '.'))
 
     def clean_valor_outros(self):
-        data = self.cleaned_data['valor_minimo']
+        data = self.cleaned_data['valor_outros']
         return Decimal(data.replace(',', '.'))
