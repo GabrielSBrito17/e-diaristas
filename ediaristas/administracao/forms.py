@@ -51,6 +51,7 @@ class ServicoForm(forms.ModelForm):
     def clean_valor_quintal(self):
         data = self.cleaned_data['valor_minimo']
         return Decimal(data.replace(',', '.'))
+
     def clean_valor_outros(self):
         data = self.cleaned_data['valor_minimo']
         return Decimal(data.replace(',', '.'))
