@@ -1,13 +1,21 @@
 {% extends 'servicos/base.html' %}
+{% load bootstrap4 %}
 
 {% block title %}
 Cadastro de Serviços
 {% endblock title %}
 
 {%block content %}
-<form method="POST">
-  {% csrf_token %}
-  {{form_servico.as_p}}
-  <button class="btn btn-primary" type="submit">Salvar</button>
-</form>
+<div class="card card-primary">
+  <div class="card-header">
+    <div class="card-title">Cadastro de serviços</div>
+  </div>
+  <div class="card-body">
+    <form method="POST">
+      {% csrf_token %}
+      {% bootstrap_form form_servico %}
+      <button class="btn btn-primary" type="submit">Salvar</button>
+    </form>
+  </div>
+</div>
 {%endblock content %}
