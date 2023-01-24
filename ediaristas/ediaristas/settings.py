@@ -124,6 +124,8 @@ LOGIN_REDIRECT_URL = 'listar_servicos'
 
 LOGOUT_REDIRECT_URL = 'logar_usuario'
 
+LOGIN_URL = 'logar_usuario'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 

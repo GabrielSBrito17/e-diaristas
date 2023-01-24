@@ -14,4 +14,10 @@ urlpatterns = [
     path('autenticacao/logout', auth_views.LogoutView.as_view(), name='deslogar_usuario'),
     path('alterar_senha', auth_views.PasswordChangeView.as_view(success_url=reverse_lazy('listar_servicos')),
          name='alterar_senha'),
+    path('resetar_senha', auth_views.PasswordResetView.as_view(), name='resetar_senha'),
+    path('resetar_senha/sucesso', auth_views.PasswordResetDoneView.as_view(),
+         name='resetar_senha_sucesso'),
+    path('resetar_senha/<str:uidb64>/<str:token>', auth_views.PasswordResetConfirmView.as_view(),
+         name='resetar_senha_confirmar'),
+    path('resetar_senha/feito', auth_views.PasswordResetDoneView.as_view(), name='resetar_senha_feito')
 ]
